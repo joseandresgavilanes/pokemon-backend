@@ -1,22 +1,17 @@
 //? Dependencies
 require("dotenv").config();
 
-// const config = {
-//   port: process.env.PORT || 3000,
-//   nodeEnv: process.env.NODE_ENV || "development",
-//   jwtSecret: process.env.JWT_SECRET,
-//   host: process.env.HOST || "http://localhost:",
-// db: {
-//   host: process.env.DB_HOST || "127.0.0.1",
-//   username: process.env.DB_USER || "postgres",
-//   password: process.env.DB_PASS || "joseandres2012",
-//   dbName: process.env.DB_NAME,
-// },
-// };
-
-module.exports = {
-  port: process.env.PORT || 5000,
+const config = {
+  port: process.env.PORT || 3000,
   nodeEnv: process.env.NODE_ENV || "development",
   jwtSecret: process.env.JWT_SECRET,
-  host: process.env.DOMAIN_HOST || "http://localhost:",
+  host: process.env.HOST || "http://localhost:3000",
+  db: {
+    host: process.env.DB_HOST || "localhost",
+    username: process.env.DB_USER || "postgres",
+    password: process.env.DB_PASS || "root",
+    dbName: process.env.DB_NAME,
+  },
 };
+
+module.exports = config;
